@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         botaoEstatisticas = findViewById(R.id.botaoEstatisticas);
 
         try {
-            SQLiteDatabase banco = openOrCreateDatabase("app1", MODE_PRIVATE, null);
+            SQLiteDatabase banco = openOrCreateDatabase("app", MODE_PRIVATE, null);
 
             banco.execSQL("CREATE TABLE IF NOT EXISTS abastecimentos (" +
                     "dataabastecimento DATE NOT NULL, " +
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             String km = quilomCarro.getText().toString();
             String valor = valorAbastecido.getText().toString();
 
-            SQLiteDatabase banco = openOrCreateDatabase("app1", MODE_PRIVATE, null);
+            SQLiteDatabase banco = openOrCreateDatabase("app", MODE_PRIVATE, null);
 
             String sql = "INSERT INTO abastecimentos " +
                     "(dataabastecimento, quantidadelitros, quilomcarro, valortotal) " +
@@ -100,5 +100,10 @@ public class MainActivity extends AppCompatActivity {
     public void abrirHistorico (View v){
         Intent telaHistorico = new Intent(this, Historico.class);
         startActivity(telaHistorico);
+    }
+
+    public void abrirEstatisticas (View v){
+        Intent telaEstatisticas = new Intent(this, Estatisticas.class);
+        startActivity(telaEstatisticas);
     }
 }

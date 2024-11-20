@@ -5,7 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Historico">
+    tools:context=".Historico"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="1dp">
 
     <TextView
         android:id="@+id/rodape2"
@@ -18,6 +20,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -26,11 +29,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#F66565"
         android:text="Voltar para tela inicial"
         app:layout_constraintBottom_toTopOf="@+id/rodape2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -38,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="10dp"
         android:text="HISTÓRICO DE ABASTECIMENTOS"
         android:textAlignment="center"
@@ -58,15 +62,17 @@
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/botaoVoltar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.416">
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/campo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="55dp" />
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

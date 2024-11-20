@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AppAbastecimento"
         tools:targetApi="31">
         <activity
+            android:name=".Estatisticas"
+            android:exported="false" />
+        <activity
             android:name=".Historico"
             android:exported="false" />
         <activity

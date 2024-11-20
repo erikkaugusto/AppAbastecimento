@@ -36,7 +36,7 @@ public class Historico extends AppCompatActivity {
         botaoVoltar.setOnClickListener(v -> finish());
 
         try {
-            SQLiteDatabase banco = openOrCreateDatabase("app1", MODE_PRIVATE, null);
+            SQLiteDatabase banco = openOrCreateDatabase("app", MODE_PRIVATE, null);
             Cursor lista = banco.rawQuery("SELECT * FROM abastecimentos", null);
 
             if (lista.moveToFirst()) {
